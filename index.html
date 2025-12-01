@@ -249,8 +249,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: row;
+            
 
         }
 
@@ -262,9 +261,11 @@
         }
 
         .info-content {
-            display: grid;
+            /*display: grid;*/
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            display: flex;
+            flex-direction: row;
         }
 
         .info-box {
