@@ -525,66 +525,13 @@
                             <span>Elétron Livre (Condução)</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="controls-panel">
-                    <div class="control-group">
-                        <h3>Seleção de Elemento</h3>
-                        <div class="atom-selection">
-                            <div class="atom-option selected" data-element="Si">
-                                <div class="atom-preview silicon-preview">Si</div>
-                                <span>Silício</span>
-                            </div>
-                            <div class="atom-option" data-element="P">
-                                <div class="atom-preview phosphorus-preview">P</div>
-                                <span>Fósforo</span>
-                            </div>
-                        </div>
-                        <div class="selection-info" id="selection-info">
-                            Clique em um átomo para selecionar
-                        </div>
-                    </div>
 
-                    <div class="control-group">
-                        <h3>Controles de Visualização</h3>
-                        <button id="toggle-conduction" class="active">Destacar Camada de Condução</button>
-                        <button id="toggle-valence">Destacar Camada de Valência</button>
-                        <button id="toggle-orbitals">Mostrar Orbitais</button>
-                        <button id="toggle-nucleus">Mostrar Núcleo</button>
-                        <button id="reset-simulation">Resetar Simulação</button>
-                    </div>
 
-                    <div class="control-group">
-                        <h3>Controles de Animação</h3>
-                        <div class="slider-control">
-                            <label for="electron-speed">Velocidade dos Elétrons</label>
-                            <input type="range" id="electron-speed" min="0" max="100" value="50">
-                        </div>
-                        <div class="slider-control">
-                            <label for="rotation-speed">Velocidade de Rotação</label>
-                            <input type="range" id="rotation-speed" min="0" max="100" value="30">
-                        </div>
-                        <div class="slider-control">
-                            <label for="conduction-speed">Velocidade do Elétron Livre</label>
-                            <input type="range" id="conduction-speed" min="0" max="100" value="70">
-                        </div>
-                    </div>
 
-                    <div class="control-group">
-                        <h3>Informações</h3>
-                        <div class="info-box" style="padding: 10px; margin: 0;">
-                            <p style="font-size: 0.9rem; color: #bbdefb; margin-bottom: 8px;">
-                                <strong>Camada de Condução:</strong> Inicialmente vazia, é ocupada pelo elétron extra do fósforo.
-                            </p>
-                            <p style="font-size: 0.85rem; color: #90a4ae;">
-                                O elétron livre pode se mover entre todos os átomos da rede, permitindo condução elétrica.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="info-panel">
+
+<div class="info-panel">
                 <h2>Mecanismo de Dopagem Tipo N</h2>
                 <div class="info-content">
                     <div class="info-box">
@@ -654,6 +601,71 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+                </div>
+
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <h3>Seleção de Elemento</h3>
+                        <div class="atom-selection">
+                            <div class="atom-option selected" data-element="Si">
+                                <div class="atom-preview silicon-preview">Si</div>
+                                <span>Silício</span>
+                            </div>
+                            <div class="atom-option" data-element="P">
+                                <div class="atom-preview phosphorus-preview">P</div>
+                                <span>Fósforo</span>
+                            </div>
+                        </div>
+                        <div class="selection-info" id="selection-info">
+                            Clique em um átomo para selecionar
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>Controles de Visualização</h3>
+                        <button id="toggle-conduction" class="active">Destacar Camada de Condução</button>
+                        <button id="toggle-valence">Destacar Camada de Valência</button>
+                        <button id="toggle-orbitals">Mostrar Orbitais</button>
+                        <button id="toggle-nucleus">Mostrar Núcleo</button>
+                        <button id="reset-simulation">Resetar Simulação</button>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>Controles de Animação</h3>
+                        <div class="slider-control">
+                            <label for="electron-speed">Velocidade dos Elétrons</label>
+                            <input type="range" id="electron-speed" min="0" max="100" value="50">
+                        </div>
+                        <div class="slider-control">
+                            <label for="rotation-speed">Velocidade de Rotação</label>
+                            <input type="range" id="rotation-speed" min="0" max="100" value="30">
+                        </div>
+                        <div class="slider-control">
+                            <label for="conduction-speed">Velocidade do Elétron Livre</label>
+                            <input type="range" id="conduction-speed" min="0" max="100" value="70">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>Informações</h3>
+                        <div class="info-box" style="padding: 10px; margin: 0;">
+                            <p style="font-size: 0.9rem; color: #bbdefb; margin-bottom: 8px;">
+                                <strong>Camada de Condução:</strong> Inicialmente vazia, é ocupada pelo elétron extra do fósforo.
+                            </p>
+                            <p style="font-size: 0.85rem; color: #90a4ae;">
+                                O elétron livre pode se mover entre todos os átomos da rede, permitindo condução elétrica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
     </div>
 
