@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -249,7 +250,8 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            
+            flex-direction: row;
+
         }
 
         .info-panel h2 {
@@ -380,9 +382,17 @@
         }
 
         @keyframes pulse {
-            0% { opacity: 0.7; }
-            50% { opacity: 1; }
-            100% { opacity: 0.7; }
+            0% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
         }
 
         .electron-shell {
@@ -450,8 +460,13 @@
         }
 
         @keyframes electron-glow {
-            from { box-shadow: 0 0 8px #00e676; }
-            to { box-shadow: 0 0 20px #00e676; }
+            from {
+                box-shadow: 0 0 8px #00e676;
+            }
+
+            to {
+                box-shadow: 0 0 20px #00e676;
+            }
         }
 
         .electron-trail {
@@ -490,6 +505,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -503,12 +519,15 @@
                     <h2 class="atoms-title">Rede de Átomos com Camada de Condução</h2>
                     <div id="atoms-canvas">
                         <div class="info-display">
-                            <div><span class="info-label">Átomos de Fósforo:</span> <span class="info-value" id="phosphorus-count">0</span></div>
-                            <div><span class="info-label">Elétrons Livres:</span> <span class="info-value" id="free-electron-count">0</span></div>
-                            <div><span class="info-label">Condução:</span> <span class="info-value" id="conduction-status">Inativa</span></div>
+                            <div><span class="info-label">Átomos de Fósforo:</span> <span class="info-value"
+                                    id="phosphorus-count">0</span></div>
+                            <div><span class="info-label">Elétrons Livres:</span> <span class="info-value"
+                                    id="free-electron-count">0</span></div>
+                            <div><span class="info-label">Condução:</span> <span class="info-value"
+                                    id="conduction-status">Inativa</span></div>
                         </div>
                     </div>
-                    
+
                     <div class="legend">
                         <div class="legend-item">
                             <div class="legend-color silicon-color"></div>
@@ -532,77 +551,77 @@
 
 
 
+                    <h2>Mecanismo de Dopagem Tipo N</h2>
+                    <div class="info-panel">
 
-<div class="info-panel">
-                <h2>Mecanismo de Dopagem Tipo N</h2>
-                <div class="info-content">
-                    <div class="info-box">
-                        <h3>Silício Puro</h3>
-                        <div class="properties">
-                            <div class="property">
-                                <span class="property-name">Elétrons de Valência:</span>
-                                <span class="property-value">4</span>
+                        <div class="info-content">
+                            <div class="info-box">
+                                <h3>Silício Puro</h3>
+                                <div class="properties">
+                                    <div class="property">
+                                        <span class="property-name">Elétrons de Valência:</span>
+                                        <span class="property-value">4</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Camada de Condução:</span>
+                                        <span class="property-value">Vazia</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Condução:</span>
+                                        <span class="property-value">Baixa</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Tipo:</span>
+                                        <span class="property-value">Intrínseco</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="property">
-                                <span class="property-name">Camada de Condução:</span>
-                                <span class="property-value">Vazia</span>
+
+                            <div class="info-box">
+                                <h3>Fósforo (Dopante)</h3>
+                                <div class="properties">
+                                    <div class="property">
+                                        <span class="property-name">Elétrons de Valência:</span>
+                                        <span class="property-value">5</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Elétron Extra:</span>
+                                        <span class="property-value">1 por átomo</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Ocupa:</span>
+                                        <span class="property-value">Camada de Condução</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Tipo de Dopagem:</span>
+                                        <span class="property-value">N</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="property">
-                                <span class="property-name">Condução:</span>
-                                <span class="property-value">Baixa</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Tipo:</span>
-                                <span class="property-value">Intrínseco</span>
+
+                            <div class="info-box">
+                                <h3>Comportamento na Rede</h3>
+                                <div class="properties">
+                                    <div class="property">
+                                        <span class="property-name">Elétron Livre:</span>
+                                        <span class="property-value">Móvel</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Movimento:</span>
+                                        <span class="property-value">Entre átomos</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Condução:</span>
+                                        <span class="property-value">Aumentada</span>
+                                    </div>
+                                    <div class="property">
+                                        <span class="property-name">Aplicação:</span>
+                                        <span class="property-value">Transistores</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="info-box">
-                        <h3>Fósforo (Dopante)</h3>
-                        <div class="properties">
-                            <div class="property">
-                                <span class="property-name">Elétrons de Valência:</span>
-                                <span class="property-value">5</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Elétron Extra:</span>
-                                <span class="property-value">1 por átomo</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Ocupa:</span>
-                                <span class="property-value">Camada de Condução</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Tipo de Dopagem:</span>
-                                <span class="property-value">N</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h3>Comportamento na Rede</h3>
-                        <div class="properties">
-                            <div class="property">
-                                <span class="property-name">Elétron Livre:</span>
-                                <span class="property-value">Móvel</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Movimento:</span>
-                                <span class="property-value">Entre átomos</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Condução:</span>
-                                <span class="property-value">Aumentada</span>
-                            </div>
-                            <div class="property">
-                                <span class="property-name">Aplicação:</span>
-                                <span class="property-value">Transistores</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
 
@@ -657,22 +676,24 @@
                         <h3>Informações</h3>
                         <div class="info-box" style="padding: 10px; margin: 0;">
                             <p style="font-size: 0.9rem; color: #bbdefb; margin-bottom: 8px;">
-                                <strong>Camada de Condução:</strong> Inicialmente vazia, é ocupada pelo elétron extra do fósforo.
+                                <strong>Camada de Condução:</strong> Inicialmente vazia, é ocupada pelo elétron extra do
+                                fósforo.
                             </p>
                             <p style="font-size: 0.85rem; color: #90a4ae;">
-                                O elétron livre pode se mover entre todos os átomos da rede, permitindo condução elétrica.
+                                O elétron livre pode se mover entre todos os átomos da rede, permitindo condução
+                                elétrica.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const canvas = document.getElementById('atoms-canvas');
             const electronSpeedSlider = document.getElementById('electron-speed');
             const rotationSpeedSlider = document.getElementById('rotation-speed');
@@ -682,14 +703,14 @@
             const phosphorusCountElement = document.getElementById('phosphorus-count');
             const freeElectronCountElement = document.getElementById('free-electron-count');
             const conductionStatusElement = document.getElementById('conduction-status');
-            
+
             // Botões de controle
             const toggleConductionBtn = document.getElementById('toggle-conduction');
             const toggleValenceBtn = document.getElementById('toggle-valence');
             const toggleOrbitalsBtn = document.getElementById('toggle-orbitals');
             const toggleNucleusBtn = document.getElementById('toggle-nucleus');
             const resetSimulationBtn = document.getElementById('reset-simulation');
-            
+
             // Variáveis de estado
             let animationId = null;
             let rotationAngle = 0;
@@ -701,20 +722,20 @@
             let highlightConduction = true;
             let selectedAtom = null;
             let selectedElement = 'Si';
-            
+
             // Contadores
             let phosphorusCount = 0;
             let freeElectronCount = 0;
-            
+
             const canvasWidth = canvas.offsetWidth;
             const canvasHeight = canvas.offsetHeight;
-            
+
             // Configuração da grade 3x3
             const gridSize = 3;
             const atomSpacing = 280;
             const startX = (canvasWidth - (gridSize - 1) * atomSpacing) / 2;
             const startY = (canvasHeight - (gridSize - 1) * atomSpacing) / 2;
-            
+
             // Armazenamento de dados
             const atoms = [];
             const allElectronPaths = [];
@@ -722,7 +743,7 @@
             let freeElectron = null;
             let conductionLayers = [];
             const electronTrails = [];
-            
+
             // Configurações dos elementos
             const elements = {
                 'Si': {
@@ -749,40 +770,40 @@
                     ]
                 }
             };
-            
+
             // Criar a rede inicial
             initializeNetwork();
-            
+
             function initializeNetwork() {
                 // Limpar canvas
                 canvas.innerHTML = '<div class="info-display"><div><span class="info-label">Átomos de Fósforo:</span> <span class="info-value" id="phosphorus-count">0</span></div><div><span class="info-label">Elétrons Livres:</span> <span class="info-value" id="free-electron-count">0</span></div><div><span class="info-label">Condução:</span> <span class="info-value" id="conduction-status">Inativa</span></div></div>';
-                
+
                 // Resetar contadores
                 phosphorusCount = 0;
                 freeElectronCount = 0;
                 updateCounters();
-                
+
                 // Resetar arrays
                 atoms.length = 0;
                 allElectronPaths.length = 0;
                 allElectrons.length = 0;
                 conductionLayers.length = 0;
-                
+
                 // Criar 9 átomos em formação 3x3 (inicialmente todos silício)
                 for (let row = 0; row < gridSize; row++) {
                     for (let col = 0; col < gridSize; col++) {
                         const centerX = startX + col * atomSpacing;
                         const centerY = startY + row * atomSpacing;
                         const atomId = row * gridSize + col;
-                        
+
                         createAtom(centerX, centerY, atomId, 'Si');
                     }
                 }
-                
+
                 // Criar camadas de condução para cada átomo
                 createConductionLayers();
             }
-            
+
             function createConductionLayers() {
                 atoms.forEach(atom => {
                     const conductionLayer = document.createElement('div');
@@ -790,19 +811,19 @@
                     if (highlightConduction) {
                         conductionLayer.classList.add('highlighted');
                     }
-                    
+
                     // Camada de condução maior que as outras camadas
                     const conductionRadius = 160;
                     conductionLayer.style.width = `${conductionRadius * 2}px`;
                     conductionLayer.style.height = `${conductionRadius * 2}px`;
                     conductionLayer.style.left = `${atom.centerX - conductionRadius}px`;
                     conductionLayer.style.top = `${atom.centerY - conductionRadius}px`;
-                    
+
                     canvas.appendChild(conductionLayer);
                     conductionLayers.push(conductionLayer);
                 });
             }
-            
+
             function createAtom(centerX, centerY, atomId, element) {
                 const elementConfig = elements[element];
                 const atomData = {
@@ -815,9 +836,9 @@
                     nucleus: null,
                     container: null
                 };
-                
+
                 atoms[atomId] = atomData;
-                
+
                 // Criar container do átomo
                 const container = document.createElement('div');
                 container.className = 'atom';
@@ -826,14 +847,14 @@
                 container.style.width = '120px';
                 container.style.height = '120px';
                 container.dataset.atomId = atomId;
-                
-                container.addEventListener('click', function() {
+
+                container.addEventListener('click', function () {
                     selectAtom(atomId);
                 });
-                
+
                 canvas.appendChild(container);
                 atomData.container = container;
-                
+
                 // Criar núcleo
                 const nucleus = document.createElement('div');
                 nucleus.className = `nucleus ${elementConfig.nucleusColor}`;
@@ -844,7 +865,7 @@
                 nucleus.style.display = showNucleusDetail ? 'block' : 'none';
                 container.appendChild(nucleus);
                 atomData.nucleus = nucleus;
-                
+
                 // Criar camadas eletrônicas
                 elementConfig.electronConfig.forEach((shell, shellIndex) => {
                     // Criar orbital
@@ -857,20 +878,20 @@
                     } else {
                         orbital.className = 'electron-shell';
                     }
-                    
+
                     orbital.style.width = `${shell.radius * 2}px`;
                     orbital.style.height = `${shell.radius * 2}px`;
                     orbital.style.left = `${60 - shell.radius}px`;
                     orbital.style.top = `${60 - shell.radius}px`;
                     orbital.style.display = showOrbitals ? 'block' : 'none';
-                    
+
                     container.appendChild(orbital);
                     atomData.electronPaths.push(orbital);
                     allElectronPaths.push(orbital);
-                    
+
                     // Criar elétrons para esta camada
                     const angleStep = (2 * Math.PI) / shell.electrons;
-                    
+
                     for (let i = 0; i < shell.electrons; i++) {
                         const electron = document.createElement('div');
                         if (shell.type === 'valence') {
@@ -878,16 +899,16 @@
                         } else {
                             electron.className = 'inner-electron electron';
                         }
-                        
+
                         const angle = i * angleStep;
                         const x = 60 + shell.radius * Math.cos(angle);
                         const y = 60 + shell.radius * Math.sin(angle);
-                        
+
                         electron.style.left = `${x - 7}px`;
                         electron.style.top = `${y - 7}px`;
-                        
+
                         container.appendChild(electron);
-                        
+
                         const electronData = {
                             element: electron,
                             atomId: atomId,
@@ -897,12 +918,12 @@
                             speed: shell.speed,
                             type: shell.type
                         };
-                        
+
                         atomData.electrons.push(electronData);
                         allElectrons.push(electronData);
                     }
                 });
-                
+
                 // Se for fósforo, adicionar elétron especial (que será promovido para condução)
                 if (element === 'P') {
                     const extraElectron = document.createElement('div');
@@ -910,7 +931,7 @@
                     extraElectron.style.left = '53px';
                     extraElectron.style.top = '53px';
                     container.appendChild(extraElectron);
-                    
+
                     const electronData = {
                         element: extraElectron,
                         atomId: atomId,
@@ -920,30 +941,30 @@
                         speed: 0.8,
                         type: 'phosphorus'
                     };
-                    
+
                     atomData.electrons.push(electronData);
                     allElectrons.push(electronData);
-                    
+
                     // Incrementar contador de fósforo
                     phosphorusCount++;
-                    
+
                     // Criar elétron livre na camada de condução
                     createFreeElectron();
                 }
             }
-            
+
             function createFreeElectron() {
                 // Remover elétron livre anterior (se existir)
                 if (freeElectron) {
                     freeElectron.element.remove();
                     freeElectron = null;
                 }
-                
+
                 // Criar novo elétron livre
                 freeElectronCount = phosphorusCount;
                 const freeElectronEl = document.createElement('div');
                 freeElectronEl.className = 'free-electron electron';
-                
+
                 // Posicionar aleatoriamente perto de um átomo de fósforo
                 const phosphorusAtoms = atoms.filter(atom => atom.element === 'P');
                 if (phosphorusAtoms.length > 0) {
@@ -952,17 +973,17 @@
                     const radius = 160;
                     const x = randomPhosphorus.centerX + radius * Math.cos(angle);
                     const y = randomPhosphorus.centerY + radius * Math.sin(angle);
-                    
+
                     freeElectronEl.style.left = `${x - 7}px`;
                     freeElectronEl.style.top = `${y - 7}px`;
                 } else {
                     // Se não há fósforo, posicionar no centro
-                    freeElectronEl.style.left = `${canvasWidth/2 - 7}px`;
-                    freeElectronEl.style.top = `${canvasHeight/2 - 7}px`;
+                    freeElectronEl.style.left = `${canvasWidth / 2 - 7}px`;
+                    freeElectronEl.style.top = `${canvasHeight / 2 - 7}px`;
                 }
-                
+
                 canvas.appendChild(freeElectronEl);
-                
+
                 freeElectron = {
                     element: freeElectronEl,
                     angle: Math.random() * 2 * Math.PI,
@@ -970,139 +991,139 @@
                     currentAtomIndex: 0,
                     targetAtomIndex: 0
                 };
-                
+
                 updateCounters();
-                
+
                 // Se há elétron livre, a condução está ativa
                 if (freeElectronCount > 0) {
                     conductionStatusElement.textContent = 'Ativa';
                     conductionStatusElement.style.color = '#00e676';
                 }
             }
-            
+
             function updateCounters() {
                 phosphorusCountElement.textContent = phosphorusCount;
                 freeElectronCountElement.textContent = freeElectronCount;
             }
-            
+
             function selectAtom(atomId) {
                 // Remover seleção anterior
                 if (selectedAtom !== null) {
                     atoms[selectedAtom].container.classList.remove('selected');
                 }
-                
+
                 // Selecionar novo átomo
                 selectedAtom = atomId;
                 atoms[atomId].container.classList.add('selected');
-                
+
                 const elementName = elements[atoms[atomId].element].name;
                 selectionInfo.textContent = `Átomo ${atomId + 1} selecionado (${elementName})`;
             }
-            
+
             function replaceAtom(atomId, newElement) {
                 if (atomId === null) return;
-                
+
                 const atom = atoms[atomId];
                 const oldElement = atom.element;
-                
+
                 if (oldElement === newElement) return;
-                
+
                 // Atualizar contador de fósforo
                 if (oldElement === 'P') phosphorusCount--;
                 if (newElement === 'P') phosphorusCount++;
-                
+
                 // Remover átomo antigo
                 atom.container.remove();
-                
+
                 // Criar novo átomo
                 createAtom(atom.centerX, atom.centerY, atomId, newElement);
-                
+
                 // Se mudou de/para fósforo, atualizar elétron livre
                 if (oldElement !== newElement && (oldElement === 'P' || newElement === 'P')) {
                     createFreeElectron();
                 }
-                
+
                 // Atualizar informação
                 const elementName = elements[newElement].name;
                 selectionInfo.textContent = `Átomo ${atomId + 1} substituído por ${elementName}`;
-                
+
                 // Manter seleção
                 selectAtom(atomId);
             }
-            
+
             // Função de animação principal
             function animate() {
                 const rotationSpeed = rotationSpeedSlider.value / 100;
                 const electronSpeed = electronSpeedSlider.value / 100;
                 const conductionSpeed = conductionSpeedSlider.value / 100;
-                
+
                 // Rotacionar orbitais
                 rotationAngle += 0.001 * rotationSpeed;
                 allElectronPaths.forEach(orbital => {
                     orbital.style.transform = `rotate(${rotationAngle}rad)`;
                 });
-                
+
                 // Mover elétrons orbitais
                 electronAngle += 0.005 * electronSpeed;
                 allElectrons.forEach(electron => {
                     const newAngle = electron.angle + electronAngle * electron.speed;
                     const x = 60 + electron.radius * Math.cos(newAngle);
                     const y = 60 + electron.radius * Math.sin(newAngle);
-                    
+
                     electron.element.style.left = `${x - 7}px`;
                     electron.element.style.top = `${y - 7}px`;
                 });
-                
+
                 // Mover elétron livre na camada de condução
                 if (freeElectron) {
                     freeElectronAngle += 0.01 * conductionSpeed;
-                    
+
                     // Criar trilha do elétron
                     if (Math.random() > 0.7) {
                         createElectronTrail(freeElectron.element);
                     }
-                    
+
                     // Remover trilhas antigas
                     cleanupElectronTrails();
-                    
+
                     // Movimento complexo do elétron livre - "pula" entre átomos
                     const time = Date.now() / 1000;
                     const baseRadius = 180;
                     const wanderRadius = 50;
-                    
+
                     // Escolher um átomo como referência (muda periodicamente)
                     const atomIndex = Math.floor((time * 0.3) % atoms.length);
                     const currentAtom = atoms[atomIndex];
-                    
+
                     // Posição oscilante ao redor do átomo
                     const angle = freeElectronAngle + atomIndex * 0.5;
                     const radius = baseRadius + Math.sin(time * 2) * wanderRadius;
-                    
+
                     const x = currentAtom.centerX + radius * Math.cos(angle);
                     const y = currentAtom.centerY + radius * Math.sin(angle);
-                    
+
                     freeElectron.element.style.left = `${x - 7}px`;
                     freeElectron.element.style.top = `${y - 7}px`;
-                    
+
                     // Atualizar contador se o elétron estiver perto de um átomo diferente
                     if (freeElectron.currentAtomIndex !== atomIndex) {
                         freeElectron.currentAtomIndex = atomIndex;
                     }
                 }
-                
+
                 animationId = requestAnimationFrame(animate);
             }
-            
+
             function createElectronTrail(electronElement) {
                 const trail = document.createElement('div');
                 trail.className = 'electron-trail';
-                
+
                 const rect = electronElement.getBoundingClientRect();
                 const canvasRect = canvas.getBoundingClientRect();
-                
+
                 trail.style.left = `${rect.left - canvasRect.left + 7}px`;
                 trail.style.top = `${rect.top - canvasRect.top + 7}px`;
-                
+
                 canvas.appendChild(trail);
                 electronTrails.push({
                     element: trail,
@@ -1110,7 +1131,7 @@
                     lifespan: 1000 // 1 segundo
                 });
             }
-            
+
             function cleanupElectronTrails() {
                 const now = Date.now();
                 for (let i = electronTrails.length - 1; i >= 0; i--) {
@@ -1126,14 +1147,14 @@
                     }
                 }
             }
-            
+
             // Event listeners para seleção de elemento
             atomOptions.forEach(option => {
-                option.addEventListener('click', function() {
+                option.addEventListener('click', function () {
                     atomOptions.forEach(opt => opt.classList.remove('selected'));
                     this.classList.add('selected');
                     selectedElement = this.dataset.element;
-                    
+
                     if (selectedAtom !== null) {
                         replaceAtom(selectedAtom, selectedElement);
                     } else {
@@ -1141,9 +1162,9 @@
                     }
                 });
             });
-            
+
             // Controles de visualização
-            toggleConductionBtn.addEventListener('click', function() {
+            toggleConductionBtn.addEventListener('click', function () {
                 highlightConduction = !highlightConduction;
                 conductionLayers.forEach(layer => {
                     if (highlightConduction) {
@@ -1154,11 +1175,11 @@
                         this.classList.remove('active');
                     }
                 });
-                this.textContent = highlightConduction ? 
+                this.textContent = highlightConduction ?
                     'Ocultar Camada de Condução' : 'Destacar Camada de Condução';
             });
-            
-            toggleValenceBtn.addEventListener('click', function() {
+
+            toggleValenceBtn.addEventListener('click', function () {
                 highlightValence = !highlightValence;
                 allElectronPaths.forEach(orbital => {
                     if (orbital.className.includes('valence-shell')) {
@@ -1171,66 +1192,67 @@
                         }
                     }
                 });
-                this.textContent = highlightValence ? 
+                this.textContent = highlightValence ?
                     'Ocultar Camada de Valência' : 'Destacar Camada de Valência';
             });
-            
-            toggleOrbitalsBtn.addEventListener('click', function() {
+
+            toggleOrbitalsBtn.addEventListener('click', function () {
                 showOrbitals = !showOrbitals;
                 allElectronPaths.forEach(orbital => {
                     orbital.style.display = showOrbitals ? 'block' : 'none';
                 });
-                this.textContent = showOrbitals ? 
+                this.textContent = showOrbitals ?
                     'Ocultar Orbitais' : 'Mostrar Orbitais';
             });
-            
-            toggleNucleusBtn.addEventListener('click', function() {
+
+            toggleNucleusBtn.addEventListener('click', function () {
                 showNucleusDetail = !showNucleusDetail;
                 atoms.forEach(atom => {
                     atom.nucleus.style.display = showNucleusDetail ? 'block' : 'none';
                 });
-                this.textContent = showNucleusDetail ? 
+                this.textContent = showNucleusDetail ?
                     'Ocultar Núcleo' : 'Mostrar Núcleo';
             });
-            
-            resetSimulationBtn.addEventListener('click', function() {
+
+            resetSimulationBtn.addEventListener('click', function () {
                 // Resetar simulação
                 initializeNetwork();
-                
+
                 // Resetar seleção
                 if (selectedAtom !== null) {
                     atoms[selectedAtom].container.classList.remove('selected');
                     selectedAtom = null;
                 }
-                
+
                 // Resetar controles visuais
                 showOrbitals = true;
                 showNucleusDetail = false;
                 highlightValence = false;
                 highlightConduction = true;
-                
+
                 // Resetar botões
                 toggleConductionBtn.classList.add('active');
                 toggleValenceBtn.classList.remove('active');
                 toggleOrbitalsBtn.textContent = 'Ocultar Orbitais';
                 toggleNucleusBtn.textContent = 'Mostrar Núcleo';
-                
+
                 // Resetar sliders
                 electronSpeedSlider.value = 50;
                 rotationSpeedSlider.value = 30;
                 conductionSpeedSlider.value = 70;
-                
+
                 selectionInfo.textContent = 'Clique em um átomo para selecionar';
-                
+
                 // Resetar seleção de elemento
                 atomOptions.forEach(opt => opt.classList.remove('selected'));
                 document.querySelector('.atom-option[data-element="Si"]').classList.add('selected');
                 selectedElement = 'Si';
             });
-            
+
             // Iniciar animação
             animate();
         });
     </script>
 </body>
+
 </html>
